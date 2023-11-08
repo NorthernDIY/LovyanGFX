@@ -40,11 +40,13 @@ namespace lgfx
   {
     struct config_t
     {
-      uint32_t freq = 1000000;
+      uint32_t freq = 4000000;
       uint16_t x_min = 0;
       uint16_t x_max = 3600;
       uint16_t y_min = 0;
       uint16_t y_max = 3600;
+      bool mirror_x = false;
+      bool mirror_y = false;
       bool bus_shared = true;          /// パネルとタッチが同じバスに繋がっている場合true;
       int16_t pin_int = -1;
       int16_t pin_rst = -1;

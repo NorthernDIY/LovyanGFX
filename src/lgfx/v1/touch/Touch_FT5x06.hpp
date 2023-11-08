@@ -31,10 +31,12 @@ namespace lgfx
     {
       _cfg.i2c_addr = 0x38;
       _cfg.x_min = 0;
-      _cfg.x_max = 319;
+      _cfg.x_max = 239;
       _cfg.y_min = 0;
-      _cfg.y_max = 319;
+      _cfg.y_max = 239;
       _cfg.freq  = 400000;
+      _cfg.mirror_x = false;
+      _cfg.mirror_y = false;
     }
 
     bool init(void) override;
