@@ -5,7 +5,7 @@
 #include <lvgl.h>
 
 /*Change to your screen resolution*/
-static const uint16_t screenWidth  = 240;
+static const uint16_t screenWidth  = 320;
 static const uint16_t screenHeight = 240;
 
 static lv_disp_draw_buf_t draw_buf;
@@ -28,7 +28,7 @@ void my_disp_flush( lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *colo
     lv_disp_flush_ready( disp );
 }
 
-/*void sd_access_sample( void )
+void sd_access_sample( void )
 {
     if (gfx.getStartCount() > 0)
     {   // Free the bus before accessing the SD card
@@ -38,7 +38,7 @@ void my_disp_flush( lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t *colo
     // Something to manipulate the SD card.
     auto file = SD.open("/file");
     file.close();
-}*/
+}
 
 /*Read the touchpad*/
 void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
@@ -60,6 +60,7 @@ void my_touchpad_read( lv_indev_drv_t * indev_driver, lv_indev_data_t * data )
 void setup()
 {
     gfx.begin();
+
     lv_init();
     lv_disp_draw_buf_init( &draw_buf, buf[0], buf[1], screenWidth * 10 );
 

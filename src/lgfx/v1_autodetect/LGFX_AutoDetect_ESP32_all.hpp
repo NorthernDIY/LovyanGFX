@@ -2282,14 +2282,22 @@ namespace lgfx
             cfg.pin_scl  = GPIO_NUM_32;   // I2C SCL pin number
             cfg.i2c_addr = 0x38; // I2C device addr
             cfg.i2c_port = I2C_NUM_1;// I2C port number
-            cfg.freq = 400000;   // I2C freq
+            //cfg.freq = 400000;   // I2C freq
             cfg.x_min = 0;
             cfg.y_min = 0;
             // cfg.x_max = 319;
             // cfg.y_max = 319;
+            cfg.bus_shared = false;
+
+            //Modified for my watch
+            cfg.freq = 400000;   // I2C freq
             cfg.x_max = 239;
             cfg.y_max = 239;
-            cfg.bus_shared = false;
+
+            cfg.mirror_x = true;
+            cfg.mirror_y = true;
+            
+            
             t->config(cfg);
             p->touch(t);
           }

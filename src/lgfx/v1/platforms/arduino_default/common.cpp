@@ -15,7 +15,7 @@ Contributors:
  [mongonta0716](https://github.com/mongonta0716)
  [tobozo](https://github.com/tobozo)
 /----------------------------------------------------------------------------*/
-/*#if defined (ESP_PLATFORM)
+#if defined (ESP_PLATFORM)
 #elif defined (ESP8266)
 #elif defined (__SAMD21__) || defined(__SAMD21G18A__) || defined(__SAMD21J18A__) || defined(__SAMD21E17A__) || defined(__SAMD21E18A__)
 #elif defined (__SAMD51__)
@@ -80,7 +80,7 @@ namespace lgfx
   /// unimplemented.
   namespace i2c
   {
-    cpp::result<void, error_t> init(int i2c_port, int pin_sda, int pin_scl, uint32_t clk_speed = 400000) { return cpp::fail(error_t::unknown_err); }
+    cpp::result<void, error_t> init(int i2c_port, int pin_sda, int pin_scl) { return cpp::fail(error_t::unknown_err); }
     cpp::result<void, error_t> release(int i2c_port) { return cpp::fail(error_t::unknown_err); }
     cpp::result<void, error_t> restart(int i2c_port, int i2c_addr, uint32_t freq, bool read) { return cpp::fail(error_t::unknown_err); }
     cpp::result<void, error_t> beginTransaction(int i2c_port, int i2c_addr, uint32_t freq, bool read) { return cpp::fail(error_t::unknown_err); }
@@ -102,4 +102,4 @@ namespace lgfx
  }
 }
 
-#endif*/
+#endif

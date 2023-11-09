@@ -168,13 +168,9 @@ if (_inited)
       if (!_cfg.mirror_x) tp[idx].x = (data[1] & 0x0F) << 8 | data[2];
       if (!_cfg.mirror_y) tp[idx].y = (data[3] & 0x0F) << 8 | data[4];
       if (_cfg.mirror_x) tp[idx].x = _cfg.x_max - ((data[1] & 0x0F) << 8 | data[2]);
-      if (_cfg.mirror_y) tp[idx].y = _cfg.y_max - (data[3] & 0x0F) << 8 | data[4];
+      if (_cfg.mirror_y) tp[idx].y = _cfg.y_max - ((data[3] & 0x0F) << 8 | data[4]);
       tp[idx].id = data[3] >> 4;
     }
-      //if (_cfg.mirror_x)ESP_LOGI("FT5x06","FT Mirrored X   %d", count);
-      //if (_cfg.mirror_y)ESP_LOGI("FT5x06","FT Mirrored Y   %d", count);
-      //if (!_cfg.mirror_x)ESP_LOGI("FT5x06","FT Normal X   %d", count);
-      //if (!_cfg.mirror_y)ESP_LOGI("FT5x06","FT Normal Y   %d", count);
     return count;
   }
 

@@ -1,6 +1,3 @@
-**Note, Targetted towards the TTGO TWATCH 2020V1 specifically!**
-
-
 # LovyanGFX
 
 [![arduino-library-badge](https://www.ardu-badge.com/badge/LovyanGFX.svg?)](https://www.ardu-badge.com/LovyanGFX)
