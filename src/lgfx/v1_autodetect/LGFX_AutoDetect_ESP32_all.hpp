@@ -2263,7 +2263,7 @@ namespace lgfx
             cfg.panel_width  = 240;
             cfg.panel_height = 240;
             p->config(cfg);
-            p->setRotation(1);
+            p->setRotation(0);
             p->light(new Light_TWatch());
           }
 

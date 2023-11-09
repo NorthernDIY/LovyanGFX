@@ -35,8 +35,8 @@ namespace lgfx
       _cfg.y_min = 0;
       _cfg.y_max = 239;
       _cfg.freq  = 400000;
-      _cfg.mirror_x = false;
-      _cfg.mirror_y = false;
+      _cfg.mirror_x = true;
+      _cfg.mirror_y = true;
     }
 
     bool init(void) override;
